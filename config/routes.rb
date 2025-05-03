@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :weight_histories  # scaffoldで作成されたルートをすべて設定
+  # resources :weight_histories, expect: [ :destroy ]  :destroyのみを除くコード
+  # resources :weight_histories, only: [ :index ] :indexのみ採用するコード
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
